@@ -29,3 +29,27 @@ class Student:
     
 aryan = Student("Aryan", [88, 92, 79])
 print(aryan)
+
+
+
+# Your exercise — build the full MLStudent class that:
+
+# 1) Inherits from Student
+# 2) Adds a courses attribute
+# 3) Overrides __str__ to also show courses:
+# Student: Aryan | Average: 86.33 | Grade: B | Courses: Deep Learning, NLP
+
+class MLStudent(Student):
+  def __init__(self, name, scores, courses):
+    super().__init__(name, scores)
+    self.courses = courses
+
+  def __str__(self):
+    return super().__str__() + f" | Courses: {', '.join(self.courses)}"
+  
+aryan = MLStudent(
+  "Aryan",
+  [88, 92, 79],
+  ["Deep Learning", "NLP"]
+)
+print(aryan)
