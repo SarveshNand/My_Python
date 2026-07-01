@@ -1,0 +1,3 @@
+This is a sample text file
+that we will use in this exercise
+so we can learn how to code in Python
